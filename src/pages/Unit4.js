@@ -161,7 +161,7 @@ function Unit4() {
           title="🔍 Binary Search"
           content={[
             '⚡ Fast search on sorted arrays.',
-            '🎯 Middle element from compare करके आधा eliminate करो।',
+            '🎯 Compare with the middle element and eliminate half each time.',
             '💡 Algorithm:',
             '   int left = 0, right = n-1;',
             '   while (left <= right) {',
@@ -170,7 +170,7 @@ function Unit4() {
             '       else if (arr[mid] < target) left = mid + 1;',
             '       else right = mid - 1;',
             '   }',
-            '⏱️ Time Complexity: O(log n) - बहुत fast! ⚡',
+            '⏱️ Time Complexity: O(log n) - Very fast! ⚡',
             '❌ Array must be sorted!'
           ]}
         />
@@ -178,7 +178,7 @@ function Unit4() {
         <ContentCard 
           title="🫧 Bubble Sort"
           content={[
-            '🎯 सबfrom simple sorting algorithm।',
+            '🎯 Simple sorting algorithm.',
             '💡 Algorithm: Move larger elements toward the end.',
             '   for (int i = 0; i < n; i++) {',
             '       for (int j = 0; j < n-1-i; j++) {',
@@ -190,7 +190,7 @@ function Unit4() {
             '       }',
             '   }',
             '⏱️ Time Complexity: O(n²) - Slow.',
-            '✅ Simplicity के लिए, Good for learning and small datasets.'
+            '✅ For simplicity, good for learning and small datasets.'
           ]}
         />
 

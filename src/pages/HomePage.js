@@ -64,6 +64,48 @@ function HomePage() {
 
   return (
     <div className="homepage">
+      <div style={{
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        color: '#ffffff',
+        fontWeight: '700',
+        fontSize: '1.8rem',
+        textAlign: 'center',
+        padding: '20px 0',
+        marginBottom: '30px',
+        marginLeft: '25%',
+        marginRight: '25%',
+        borderRadius: '10px',
+        boxShadow: '0 0 30px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2)',
+        letterSpacing: '0.8px',
+        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+        textShadow: '0 2px 4px rgba(0, 0, 0, 0.4)',
+        animation: 'neonGlow 2s ease-in-out infinite, borderSnake 3s linear infinite',
+        border: '3px solid transparent',
+        backgroundImage: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%), conic-gradient(from 0deg, #ff1493, #ff69b4, #ff1493)',
+        backgroundOrigin: 'border-box',
+        backgroundClip: 'padding-box, border-box',
+        position: 'relative'
+      }}>
+        <style>{`
+          @keyframes neonGlow {
+            0%, 100% {
+              box-shadow: 0 0 30px rgba(102, 126, 234, 0.6), 0 0 30px rgba(118, 75, 162, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2);
+            }
+            50% {
+              box-shadow: 0 0 50px rgba(102, 126, 234, 0.9), 0 0 50px rgba(118, 75, 162, 0.9), inset 0 0 30px rgba(255, 255, 255, 0.3);
+            }
+          }
+          @keyframes borderSnake {
+            0% {
+              background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%), conic-gradient(from 0deg, #ff1493, #ff69b4, #ff1493);
+            }
+            100% {
+              background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%), conic-gradient(from 360deg, #ff1493, #ff69b4, #ff1493);
+            }
+          }
+        `}</style>
+        Made By Ron
+      </div>
       <div className="hero-section">
         <div className="hero-content">
           <h1>🚀 C Language Learning Portal 🚀</h1>
@@ -138,14 +180,14 @@ function HomePage() {
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h4>Unit 1: C Basics</h4>
-              <p>Characters, Keywords, Data types - Foundation बनाएंगे! 🏗️</p>
+              <p>Characters, Keywords, Data types - Build the foundation! 🏗️</p>
             </div>
           </div>
           <div className="timeline-item">
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h4>Unit 2-4: Core Concepts</h4>
-              <p>Control structures, Functions, Arrays - मजबूत logic! 💪</p>
+              <p>Control structures, Functions, Arrays - Build strong logic! 💪</p>
             </div>
           </div>
           <div className="timeline-item">
@@ -159,17 +201,17 @@ function HomePage() {
             <div className="timeline-dot"></div>
             <div className="timeline-content">
               <h4>Unit 7: C++ Transition</h4>
-              <p>OOP concepts - अगला level unlock! ⭐</p>
+              <p>OOP concepts - Unlock the next level! ⭐</p>
             </div>
           </div>
         </div>
       </section>
 
       <section className="cta-section">
-        <h2>तुम कर सकते हो! (You Can Do It!) 🎯</h2>
-        <p>चलो, शुरू करते हैं ये amazing journey को! Start with Unit 1 आज ही!</p>
+        <h2>You Can Do It! 🎯</h2>
+        <p>Let's start this amazing journey! Begin with Unit 1 today!</p>
         <Link to="/unit1" className="btn btn-large">
-          शुरुआत करो अभी! 🚀
+          Start Now! 🚀
         </Link>
       </section>
     </div>

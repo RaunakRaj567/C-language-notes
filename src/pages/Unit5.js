@@ -101,71 +101,71 @@ function Unit5() {
         <ContentCard 
           title="🔢 Pointer Arithmetic"
           content={[
-            '➕ ptr + 1: अगले element का address।',
-            '➖ ptr - 1: पिछले element का address।',
-            '💡 Integer array के लिए: ptr + 1 से 4 bytes ahead (int की size)।',
-            '   Float array के लिए: ptr + 1 से 4 bytes ahead (float की size)।',
+            '➕ ptr + 1: Address of the next element.',
+            '➖ ptr - 1: Address of the previous element.',
+            '💡 For integer arrays: ptr + 1 moves 4 bytes ahead (size of int).',
+            '   For float arrays: ptr + 1 moves 4 bytes ahead (size of float).',
             '🎯 Example:',
             '   int arr[5] = {10, 20, 30, 40, 50};',
-            '   int *ptr = arr;  // पहले element को point करता है',
+            '   int *ptr = arr;  // Points to the first element',
             '   *(ptr+1) = 20, *(ptr+2) = 30, etc.',
-            '💪 Pointer arithmetic से arrays को traverse कर सकते हो!'
+            '💪 You can traverse arrays using pointer arithmetic!'
           ]}
         />
 
         <ContentCard 
           title="🔗🔗 Double Pointer"
           content={[
-            '🎯 Pointer का pointer! int **pptr;',
+            '🎯 Pointer to a pointer! int **pptr;',
             '💡 Example:',
             '   int x = 10;',
-            '   int *ptr = &x;  // ptr, x को point करता है',
-            '   int **pptr = &ptr;  // pptr, ptr को point करता है',
+            '   int *ptr = &x;  // ptr points to x',
+            '   int **pptr = &ptr;  // pptr points to ptr',
             '🔍 Dereferencing:',
-            '   *pptr = ptr का value (address)',
-            '   **pptr = x की value (10)',
-            '💪 Pass by reference के साथ pointers को modify करने के लिए!'
+            '   *pptr = value of ptr (address)',
+            '   **pptr = value of x (10)',
+            '💪 To modify pointers using pass by reference!'
           ]}
         />
 
         <ContentCard 
           title="💾 Dynamic Memory Allocation"
           content={[
-            '⚡ Runtime में जितनी memory चाहिए उतनी allocate कर सकते हो।',
+            '⚡ Allocate as much memory as needed at runtime.',
             '📌 malloc() (memory allocation):',
             '   int *ptr = (int*)malloc(sizeof(int));',
-            '   20 integers के लिए: (int*)malloc(20 * sizeof(int));',
+            '   For 20 integers: (int*)malloc(20 * sizeof(int));',
             '📌 calloc() (clear allocation):',
-            '   int *ptr = (int*)calloc(20, sizeof(int));  // 0 से initialize',
+            '   int *ptr = (int*)calloc(20, sizeof(int));  // initialized to 0',
             '📌 realloc() (reallocate):',
-            '   ptr = realloc(ptr, 30 * sizeof(int));  // resize करो',
-            '⚠️ malloc(), calloc() failure पर NULL return करते हैं!'
+            '   ptr = realloc(ptr, 30 * sizeof(int));  // resize',
+            '⚠️ malloc(), calloc() return NULL on failure!'
           ]}
         />
 
         <ContentCard 
           title="🔓 Memory Deallocation"
           content={[
-            '♻️ free() से memory को release कर सकते हो।',
+            '♻️ Use free() to release memory.',
             '📝 Syntax: free(ptr);',
             '💡 Example:',
             '   int *ptr = (int*)malloc(sizeof(int));',
-            '   // ... काम करो ...',
-            '   free(ptr);  // memory release करो',
-            '   ptr = NULL;  // dangling pointer से बचो',
-            '⚠️ एक बार free() करने के बाद दोबारा free() न करो!',
-            '💪 Memory leak रोकता है।'
+            '   // ... do some work ...',
+            '   free(ptr);  // release memory',
+            '   ptr = NULL;  // avoid dangling pointer',
+            '⚠️ Do not free() the same pointer twice!',
+            '💪 Prevents memory leaks.'
           ]}
         />
 
         <ContentCard 
-          title="🔤 Strings और Pointers"
+          title="🔤 Strings and Pointers"
           content={[
-            '📝 String एक character array है जो \\0 से terminate होता है।',
-            '💡 char *str = "Hello";  // str pointer है',
-            '   char arr[6] = "Hello";  // arr array है',
-            '🎯 दोनों काम करते हैं लेकिन अलग हैं:',
-            '   Pointer: read-only string (modifying से crash हो सकता है)',
+            '📝 A string is a character array that ends with \0.',
+            '💡 char *str = "Hello";  // str is a pointer',
+            '   char arr[6] = "Hello";  // arr is an array',
+            '🎯 Both work but are different:',
+            '   Pointer: read-only string (modifying may cause a crash)',
             '   Array: modifiable string',
             '📊 String functions: strlen(), strcpy(), strcat(), strcmp(), etc.'
           ]}
@@ -221,26 +221,26 @@ function Unit5() {
         <ContentCard 
           title="🎯 Function Pointers"
           content={[
-            '🎯 Pointer जो function के address को point करता है।',
+            '🎯 Pointer that points to the address of a function.',
             '📝 Syntax: return_type (*ptr)(parameter_types);',
             '💡 Example:',
             '   int add(int a, int b) { return a + b; }',
             '   int (*funcPtr)(int, int) = add;',
-            '   int result = funcPtr(5, 3);  // function call करो',
-            '💪 Callbacks और dynamic function calls के लिए!'
+            '   int result = funcPtr(5, 3);  // call the function',
+            '💪 For callbacks and dynamic function calls!'
           ]}
         />
 
         <ContentCard 
           title="🌫️ Void Pointer"
           content={[
-            '💾 Generic pointer - किसी भी type को point कर सकता है।',
+            '💾 Generic pointer - can point to any type.',
             '📝 Syntax: void *ptr;',
             '   int x = 10;',
             '   void *ptr = &x;',
-            '⚠️ Dereferencing से पहले cast करना पड़ता है।',
+            '⚠️ Must cast before dereferencing.',
             '   int val = *(int*)ptr;',
-            '💡 malloc(), calloc() void pointer return करते हैं!'
+            '💡 malloc() and calloc() return void pointers!'
           ]}
         />
 
