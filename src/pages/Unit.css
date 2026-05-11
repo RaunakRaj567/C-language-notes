@@ -1,0 +1,315 @@
+.unit-page {
+    animation: slideInUp 0.5s ease;
+}
+
+.unit-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.unit-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    animation: slideInLeft 0.6s ease;
+}
+
+.unit-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    animation: slideInLeft 0.7s ease;
+}
+
+.content-section {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.content-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+    animation: slideInUp 0.5s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+}
+
+.content-card h3 {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f4ff;
+}
+
+.card-content {
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.bullet-points {
+    list-style: none;
+    padding: 0;
+}
+
+.bullet-points li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.bullet-points li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.bullet-points li strong {
+    color: #667eea;
+}
+
+/* Viva Section */
+.viva-section {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    border-left: 5px solid #48bb78;
+}
+
+.viva-section h2 {
+    color: #48bb78;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.viva-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.viva-item {
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.viva-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.viva-item.expanded {
+    border-color: #48bb78;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.2);
+}
+
+.viva-question {
+    width: 100%;
+    padding: 15px 20px;
+    background: #f8f9ff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.viva-question:hover {
+    background: #e6f0ff;
+}
+
+.viva-item.expanded .viva-question {
+    background: #e6f9f1;
+    border-bottom: 2px solid #48bb78;
+}
+
+.q-number {
+    color: #667eea;
+    font-weight: bold;
+    min-width: 45px;
+}
+
+.q-text {
+    flex: 1;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.q-icon {
+    color: #667eea;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.viva-item.expanded .q-icon {
+    color: #48bb78;
+}
+
+.viva-answer {
+    padding: 20px;
+    background: #f8f9ff;
+    border-top: 2px solid #e2e8f0;
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.viva-item.expanded .viva-answer {
+    background: #e6f9f1;
+    border-top-color: #48bb78;
+}
+
+/* Unit Footer */
+.unit-footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.unit-footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.unit-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.unit-footer li {
+    padding: 10px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.unit-footer li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Code Block Styling (if needed) */
+.code-block {
+    background: #2d3748;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .unit-header {
+        padding: 25px 15px;
+    }
+
+    .unit-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .unit-intro {
+        font-size: 1rem;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+
+    .content-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .bullet-points li {
+        font-size: 0.95rem;
+        padding: 8px 0;
+    }
+
+    .viva-section {
+        padding: 20px;
+    }
+
+    .viva-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .viva-question {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .viva-answer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .unit-footer {
+        padding: 20px;
+    }
+
+    .unit-footer h3 {
+        font-size: 1.2rem;
+    }
+
+    .unit-footer li {
+        font-size: 0.9rem;
+        padding-left: 25px;
+    }
+}
+
+/* Animation for content cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
